@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Links & Buttons</title>
-  <style>
-    
-  </style>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Links & Buttons</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* Button and Link Styling */
+      .btn {
+        background: #4c6ca0;
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 2px;
+        border-radius: 5px;
+        cursor: pointer;
+        /* user-select: none; */
+      }
+      .btn:hover {
+        background: pink;
+        outline: none;
+      }
+      .btn:active {
+        user-select: none;
+      }
+
+      /* Link Styling only */
+      a {
+        text-decoration: none;
+        display: block;
+        width: fit-content;
+      }
+      a:active {
+        color: #4c6ca0;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="btn" href="#">My Link</a>
+    <button class="btn">My Button</button>
+  </body>
 </html>
