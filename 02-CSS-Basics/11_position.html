@@ -5,7 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Position</title>
-    <style></style>
+    <style>
+      /* 
+       Static: Not effected by tblr(top, bottom, left, right) properties/values
+       Relative: tlbr values cause element to be moved from its it normal position
+       Absolute: Positioned relative to its parent element that is positioned "relative"
+       Fixed: Positioned relative to the viewport.
+       Sticky: Positioned based on scroll position
+      */
+      body {
+        height: 2000px;
+      }
+
+      #box {
+        height: 100px;
+        width: 100px;
+      }
+
+      .container {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        background-color: grey;
+      }
+
+      .box-1 {
+        position: relative;
+        background-color: red;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+      }
+      .box-2 {
+        position: absolute;
+        background-color: yellow;
+        top: 50px;
+        left: 50px;
+      }
+      .box-3 {
+        position: absolute;
+        background-color: green;
+        bottom: 50px;
+        right: 50px;
+      }
+      .box-4 {
+        background-color: blue;
+        position: fixed;
+      }
+      .box-5 {
+        background-color: orange;
+        position: sticky;
+        top: 0;
+        right: 100px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="box-1" id="box"></div>
+    <div class="container">
+      <div class="box-2" id="box"></div>
+      <div class="box-3" id="box"></div>
+    </div>
+    <div class="box-4" id="box"></div>
+    <div class="box-5" id="box"></div>
+  </body>
 </html>
